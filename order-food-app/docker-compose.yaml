@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  restaurant-app-ws:
+    image: 'restaurant-app-ws:latest'
+    container_name: restaurant-app-ws
+    restart: 'on-failure:5'
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/foodsystem?useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: slsZ1XmB    
+    volumes:
+      - ../file-upload:/Volumes/Data/HPhucDev/HPhucGithub/ReactNative/Restaurant/RestaurantManagementSystem/Sourcecode/Backend-SpringBoot/file-upload
+    networks:
+      - restaurant-app-ws_network
+      - mysql-docker
+
+networks:
+  mysql-docker:
+    external: true 
+  restaurant-app-ws_network:    
+    external: true
+    
+volumes:
+  file-upload:
+    driver: local

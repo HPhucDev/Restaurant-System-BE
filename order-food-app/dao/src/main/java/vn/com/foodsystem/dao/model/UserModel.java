@@ -64,7 +64,7 @@ public class UserModel implements Serializable {
 //	private LocalDateTime createDate;
 	private Date createDate;
 
-	@Column(name = "access_token")
+	@Column(name = "access_token", length = 1000)
 	private String accessToken;
 
 	@Column(name = "role")

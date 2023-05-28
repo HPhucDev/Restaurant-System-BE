@@ -1,6 +1,5 @@
 package vn.com.foodsystem.web.dto;
 
-import vn.com.foodsystem.dao.enums.FoodItemStatus;
 import vn.com.foodsystem.dao.enums.OrderDetailStatus;
 
 public class OrderDetailDTO {
@@ -9,6 +8,7 @@ public class OrderDetailDTO {
 	private Long idOrder;
 	private Double quantity;
 	private String note;
+	private String reasonRefuse;
 	private OrderDetailStatus status;
 	
 	private FoodItemDTO foodItemModel;
@@ -19,6 +19,14 @@ public class OrderDetailDTO {
 
 	public void setIdFoodItem(Long idFoodItem) {
 		this.idFoodItem = idFoodItem;
+	}
+
+	public String getReasonRefuse() {
+		return reasonRefuse;
+	}
+
+	public void setReasonRefuse(String reasonRefuse) {
+		this.reasonRefuse = reasonRefuse;
 	}
 
 	public Long getId() {

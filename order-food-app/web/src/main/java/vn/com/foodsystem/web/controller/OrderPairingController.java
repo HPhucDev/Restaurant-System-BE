@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import vn.com.foodsystem.business.service.OrderPairingService;
-import vn.com.foodsystem.dao.model.OrderPairingModel;
 import vn.com.foodsystem.web.converter.OrderPairingConverterService;
 import vn.com.foodsystem.web.dto.OrderPairingDTO;
 

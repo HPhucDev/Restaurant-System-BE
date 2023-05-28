@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import vn.com.foodsystem.business.service.FoodItemService;
 import vn.com.foodsystem.business.service.OrderDetailService;
-import vn.com.foodsystem.business.service.OrderService;
 import vn.com.foodsystem.dao.enums.OrderDetailStatus;
 import vn.com.foodsystem.dao.model.OrderDetailModel;
 import vn.com.foodsystem.web.converter.OrderDetailConverterService;
@@ -32,12 +30,6 @@ public class OrderDetailController {
 
 	@Autowired
 	private OrderDetailService orderDetailService;
-
-	@Autowired
-	private OrderService orderService;
-
-	@Autowired
-	private FoodItemService foodItemService;
 	
 	@Autowired
 	private UpdateInfoConverterService updateInfoConverterService;

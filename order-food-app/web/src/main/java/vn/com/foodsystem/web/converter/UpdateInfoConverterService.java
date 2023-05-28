@@ -58,6 +58,9 @@ public class UpdateInfoConverterService {
 		if(orderDetailDTO.getStatus() != null) {
 			orderDetailModel.setStatus(orderDetailDTO.getStatus());
 		}
+		if(orderDetailDTO.getReasonRefuse() != null) {
+			orderDetailModel.setReasonRefuse(orderDetailDTO.getReasonRefuse());
+		}
 	}
 	public void convertFoodItemlInfo(FoodItemModel foodItemModel,FoodItemDTO foodItemDTO) {
 		if(foodItemModel == null || foodItemDTO == null) {

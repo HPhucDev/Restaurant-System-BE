@@ -11,8 +11,6 @@ import org.springframework.util.CollectionUtils;
 import vn.com.foodsystem.business.service.FoodItemService;
 import vn.com.foodsystem.business.service.OrderService;
 import vn.com.foodsystem.dao.model.FoodItemModel;
-import vn.com.foodsystem.dao.model.FoodTypeModel;
-import vn.com.foodsystem.dao.model.OrderDetailID;
 import vn.com.foodsystem.dao.model.OrderDetailModel;
 import vn.com.foodsystem.dao.model.OrderModel;
 import vn.com.foodsystem.web.dto.OrderDetailDTO;

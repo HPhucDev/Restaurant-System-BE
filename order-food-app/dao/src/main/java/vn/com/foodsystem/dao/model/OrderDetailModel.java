@@ -3,14 +3,12 @@ package vn.com.foodsystem.dao.model;
 import java.io.Serializable;
 
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.MapsId;
 import javax.persistence.Table;
 
 import vn.com.foodsystem.dao.enums.OrderDetailStatus;
@@ -38,6 +36,9 @@ public class OrderDetailModel implements Serializable {
 
 	@Column(name = "`note`")
 	private String note;
+	
+	@Column(name = "reason_refuse")
+	private String reasonRefuse;
 
 	@Column(name = "`status`")
 	private OrderDetailStatus status;
@@ -106,6 +107,16 @@ public class OrderDetailModel implements Serializable {
 
 	public void setNote(String note) {
 		this.note = note;
+	}
+
+
+
+	public String getReasonRefuse() {
+		return reasonRefuse;
+	}
+
+	public void setReasonRefuse(String reasonRefuse) {
+		this.reasonRefuse = reasonRefuse;
 	}
 
 }
